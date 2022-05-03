@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "BookShop",
+  "namespace": "com.books.avro",
+  "fields": [
+    {"name": "id", "type": "int"},
+    {"name": "name", "type": "string"},
+    {"name": "address", "type": "string"},
+    {"name": "owner", "type":  ["null", "string"]},
+    {"name": "phone", "type": ["null", "string"]}
+  ]
+}

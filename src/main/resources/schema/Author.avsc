@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "Author",
+  "namespace": "com.books.avro",
+  "fields": [
+    {"name": "id", "type": "int"},
+    {"name": "name", "type": "string"},
+    {"name": "genres", "type": {"type": "array", "items": "string"} },
+    {"name": "age", "type": ["null", "int"]},
+    {"name": "description", "type": ["null", "string"]}
+  ]
+}

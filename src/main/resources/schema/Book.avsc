@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "Book",
+  "namespace": "com.books.avro",
+  "fields": [
+    {"name": "id", "type": "int"},
+    {"name": "name", "type": "string"},
+    {"name": "genre", "type": "string"},
+    {"name": "author", "type": "string"},
+    {"name": "year", "type": ["null", "int"]}
+  ]
+}

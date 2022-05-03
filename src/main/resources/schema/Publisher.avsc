@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "Publisher",
+  "namespace": "com.books.avro",
+  "fields": [
+    {"name": "id", "type": "int"},
+    {"name": "name", "type": "string"},
+    {"name": "address", "type": "string"}
+  ]
+}
