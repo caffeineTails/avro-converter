@@ -1,6 +1,7 @@
 package com.avroconverter.controller;
 
 import com.avroconverter.models.ModelSchema;
+import com.avroconverter.models.Models2;
 import com.avroconverter.service.ProcessService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,5 +28,14 @@ public class ProcessController {
             processService.processFile(modelSchemas);
 
         return new ResponseEntity<>("all files processed successfully", HttpStatus.OK);
+    }
+
+    @PostMapping("/con")
+    public ResponseEntity<String> conLists(@RequestBody List<Models2> models2) {
+        if (models2 == null) {
+            return new ResponseEntity<>("nothing to consume", HttpStatus.NOT_FOUND);
+        }
+        processService.processArray(models2);
+        return new ResponseEntity<>("all files were consumed", HttpStatus.OK);
     }
 }
